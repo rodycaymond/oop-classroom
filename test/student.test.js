@@ -1,7 +1,7 @@
 const expect = require('chai').expect
 const Student = require('../src').Student
 
-xdescribe('Student', function () {
+describe('Student', function () {
   before(function () {
     this.properties = [ 'Shelly Vasquez', 44 ]
   })
@@ -36,7 +36,7 @@ xdescribe('Student', function () {
       expect(student.skillLevel).to.equal(this.properties[1] + 1)
     })
 
-    it('should cannot increase the student\'s `skillLevel` above 100', function () {
+    it('should not increase the student\'s `skillLevel` above 100', function () {
       const student = new Student(...this.properties)
       student.skillLevel = 100
       student.study()
